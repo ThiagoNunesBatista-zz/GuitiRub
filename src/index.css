@@ -1,0 +1,24 @@
+/* External Fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/* Reset CSS */
+:root {
+  --primary-color: #24292E;
+  --secondary-dark: #404448;
+  --primary-green: #2EBC4F;
+  --primary-blue: #1074E7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}

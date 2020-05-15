@@ -1,32 +1,35 @@
 // External Imports
+// JavaScript
 import PropTypes from 'prop-types'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Navbar = ({ icon, title, links }) => {
+// Internal Imports
+// Styled Components
+import { HorizontalNavbar } from '../styledComponents'
+
+const TopNavbar = ({ icon, title, links }) => {
   return (
-    <nav className='navbar bg-primary'>
-      <Link to='/'><h1><i className={icon} />  {title}</h1></Link>
+    <HorizontalNavbar>
+      <Link to='/'><i className={icon} /></Link>
 
       <ul>
         {links.map(({ endpoint, text }, index) => (
           <li key={index}><Link to={endpoint}>{text}</Link></li>
         ))}
       </ul>
-    </nav>
+    </HorizontalNavbar>
   )
 }
 
 // Setting Prop Types
-Navbar.defaultProps = {
-  icon: 'fab fa-github',
-  title: [1, 2, 3]
+TopNavbar.defaultProps = {
+  icon: 'fab fa-github'
 }
 
-Navbar.propTypes = {
+TopNavbar.propTypes = {
   icon: PropTypes.string,
-  title: PropTypes.string,
   links: PropTypes.array
 }
 
-export default Navbar
+export default TopNavbar
